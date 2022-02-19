@@ -4,8 +4,8 @@ const totalCPUs = require("os").cpus().length;
 
 if (require.main === module) {
     if (cluster.isMaster) {
-        console.log(`Number of CPUs is ${totalCPUs}`);
-        console.log(`Master ${process.pid} is running`);
+        console.log(`Number of CPUs is ${totalCPUs}\n`);
+        console.log(`Master ${process.pid} is running\n`);
 
         //////// Create the child process //////////////
         for (let i = 0; i < totalCPUs; i++) {
